@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho | Hammershark</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<style>
+
+.back-link {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--primary);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+}
+
+.back-link:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  
+}
+
+.btn-secondary {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+
+}
+
+</style>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo-container">
+      <h1 class="logo"><a href="../index.html">Hammershark</a></h1>
+      <img src="../img/logo.png" alt="Hammershark Logo" class="logo-img">
+    </div>
+
+    <a href="../index.html" class="back-link">Voltar</a>
+  </header>
+
+  <main class="container">
+    <section class="cart-page-container">
+      <h2 class="section-title">Revisão do Pedido</h2>
+      
+      <div id="cart-wrapper">
+        <ul id="cart-items" class="cart-items-list">
+          </ul>
+
+        <div class="cart-footer">
+          <div class="summary-box">
+            <p>Subtotal: <span>R$ <span id="subtotal">0.00</span></span></p>
+
+            <div class="total-line">
+                <span>Total:</span>
+                <strong>R$ <span id="total">0.00</span></strong>
+            </div>
+
+            <div class="cart-actions">
+            <button class="btn-secondary" id="clearCartBtn">Esvaziar Carrinho</button>
+            </div>
+
+            <button class="checkout-btn" id="checkoutBtn">Finalizar via WhatsApp</button>
+          </div>
+        </div>
+      </div>
+      
+      <div id="empty-cart-msg" style="display:none; text-align:center; padding: 3rem 0;">
+          <p>Seu carrinho está vazio.</p>
+          <br>
+          <a href="../index.html" class="btn-primary">Ir para a Loja</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="../scripts/scripts.js"></script>
+</body>
+</html>
